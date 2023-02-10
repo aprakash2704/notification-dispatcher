@@ -54,12 +54,12 @@ The application is built using Java 8 and Spring Boot version 2.7.8. It uses Jun
 <br>Code coverage is currently 90.9%, the channel adapters for Email, SMS, Whatsapp are missing code coverage as there are no actual implementation required.
 
 ## Installation and Execution
-- clone the repository
+- clone the repository (visibility is public)
 
 ```sh 
-$ git clone https://gitlab.com/aprakash7/notification-dispatcher.git
+$ git clone https://github.com/aprakash2704/notification-dispatcher.git
 ```
-- import the project to eclipse/intelliJ, build the project with maven
+- import the project notification-dispatcher to eclipse/intelliJ, build the project with maven
 - Running NotificationDispatcherApplication.java as java application should start the spring boot server, now the port would by default listening at 8080 for this application
 - http://localhost:8080/notifications should work now, please use 'POST' verb with the endpoint
 - setup the authorization with Basic Auth mentioned with details provided in Authorization section above
