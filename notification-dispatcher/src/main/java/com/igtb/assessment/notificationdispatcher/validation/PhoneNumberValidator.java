@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * The Class SMSValidator.
  */
-public class SMSValidator {
+public class PhoneNumberValidator {
 
     /** The Constant PHONE_NUMBER_REGEX. */
     private static final String PHONE_NUMBER_REGEX = "^\\+[1-9]\\d{1,14}$";

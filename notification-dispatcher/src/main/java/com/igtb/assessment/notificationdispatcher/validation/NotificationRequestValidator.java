@@ -33,7 +33,7 @@ public class NotificationRequestValidator implements Validator {
 			case SMS :
 			case WhatsApp :
 				for (final String recipient : request.getRecipients()) {
-					if (!SMSValidator.isValid(recipient)) {
+					if (!PhoneNumberValidator.isValid(recipient)) {
 						errors.rejectValue("recipients", "phonenumber.invalid", "Invalid Phone number");;
 					}
 				}

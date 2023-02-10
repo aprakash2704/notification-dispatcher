@@ -1,4 +1,4 @@
-package com.igtb.assessment.notificationdispatcher;
+package com.igtb.assessment.notificationdispatcher.filter;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
