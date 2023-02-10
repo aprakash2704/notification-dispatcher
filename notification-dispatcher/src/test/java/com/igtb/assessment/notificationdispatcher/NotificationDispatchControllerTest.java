@@ -106,7 +106,7 @@ public class NotificationDispatchControllerTest {
     
     final ObjectMapper mapper = new ObjectMapper();
     final ObjectWriter writer = mapper.writer().withDefaultPrettyPrinter();
-	final String json = writer.writeValueAsString(request);
+    final String json = writer.writeValueAsString(request);
 
     mockMvc.perform(post("/notifications").header("Authorization", "Basic aUdUQlVzZXI6aUdUQlBhc3N3b3Jk")
       .contentType(MediaType.APPLICATION_JSON)
