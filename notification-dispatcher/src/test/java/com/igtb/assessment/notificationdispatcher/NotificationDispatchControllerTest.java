@@ -58,7 +58,7 @@ public class NotificationDispatchControllerTest {
     
     final ObjectMapper mapper = new ObjectMapper();
     final ObjectWriter writer = mapper.writer().withDefaultPrettyPrinter();
-	final String json = writer.writeValueAsString(request);
+    final String json = writer.writeValueAsString(request);
     
     when(notificationService.dispatch(request)).thenReturn(new NotificationResponse(Channel.Email + " notification was sent successfully."));
     mockMvc.perform(post("/notifications").header("Authorization", "Basic aUdUQlVzZXI6aUdUQlBhc3N3b3Jk")
@@ -75,15 +75,7 @@ public class NotificationDispatchControllerTest {
 	 */
   @Test
   public void testFailSendNotificationForUnAuthorizedCredentials() throws Exception {
-//    final String message = "Hello, this is a test notification.";
-//    final List<String> recipients = Arrays.asList("igtb@igtb.com");
-//    final NotificationRequest request = new NotificationRequest(message, recipients, Channel.Email);
-//    
-//    final ObjectMapper mapper = new ObjectMapper();
-//    final ObjectWriter writer = mapper.writer().withDefaultPrettyPrinter();
-//	final String json = writer.writeValueAsString(request);
-	
-	final String reqJson = "{\n" + "\"message\": \"dd\",\n"
+   final String reqJson = "{\n" + "\"message\": \"dd\",\n"
 			+ "	\"recipients\": [\"sss@dd.com\"],\n"
 			+ "	\"channel\": \"Email\"\n" + "}";
 
@@ -121,7 +113,7 @@ public class NotificationDispatchControllerTest {
 	 */
   @Test
   public void testFailSendNotificationBadRequestWithInvalidChannel() throws Exception {
-	  final String reqJson = "{\n" + "\"message\": \"dd\",\n"
+    final String reqJson = "{\n" + "\"message\": \"dd\",\n"
 				+ "	\"recipients\": [\"sss@dd.com\"],\n"
 				+ "	\"channel\": \"Telegram\"\n" + "}";
 
